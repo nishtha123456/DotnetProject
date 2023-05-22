@@ -1,0 +1,28 @@
+﻿@page
+@model ArrayList.Pages.Students.IndexModel
+@{
+}
+<div class="row">
+    <div class="col lg-6">
+    <h1>Students List</h1>
+    </div>
+     <div class="col lg-6">
+     <a class="btn btn-primary" asp-area="" asp-page="Create">Add Student</a>
+    </div>
+       
+    </div>
+    <table class="table table-bordered table-striped" width="80%">
+       <thead> <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var obj in Model.Students) 
+        {  <tr>
+            <td width="50%">@obj.Id</td>
+            <td width="50%">@obj.Name</td>
+        </tr>
+      }
+    </tbody>
+    </table>

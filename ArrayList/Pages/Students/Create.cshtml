@@ -1,0 +1,13 @@
+﻿@page
+@model ArrayList.Pages.Students.CreateModel
+
+<form method="post" style="width=50%;">
+    <div class="row">
+        <h2 class="text-center">Enter Student Detail</h2>
+        <hr/>
+    </div>
+    <div class="row mt-5 pt-4">
+        Name: <input type="text" asp-for="@Model.Student.Name" class="form-control" />
+    </div>
+    <button type="submit" class="btn-btn primary">Save</button>
+</form>
